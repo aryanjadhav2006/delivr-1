@@ -1,0 +1,166 @@
+.favorites-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF8E7;
+}
+
+.favorites-page h1 {
+    font-family: 'Chewy', cursive;
+    color: #800020;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 24px;
+}
+
+.no-favorites {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.heart-icon {
+    font-size: 80px;
+    color: #ffcdd2;
+    margin-bottom: 24px;
+}
+
+.no-favorites h2 {
+    margin-bottom: 12px;
+    color: #333;
+    font-family: 'Chewy', cursive;
+    font-size: 2rem;
+}
+
+.no-favorites p {
+    color: #666;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+/* Reusing card styles from Home.css for consistency */
+.restaurant-card-wrapper {
+    position: relative;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorite-btn.active {
+    color: #ffcdd2;
+}
+
+.favorite-btn.active svg {
+    fill: #ffcdd2;
+}
+
+.restaurant-card {
+    display: block;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #eee;
+    height: 100%;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(128, 0, 32, 0.15);
+    border-color: #800020;
+}
+
+.restaurant-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.restaurant-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.restaurant-card:hover .restaurant-image img {
+    transform: scale(1.1);
+}
+
+.restaurant-info {
+    padding: 20px;
+}
+
+.restaurant-info h3 {
+    font-family: 'Chewy', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.cuisines {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.restaurant-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.rating {
+    background-color: #4caf50;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.delivery-time,
+.price {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: #666;
+}

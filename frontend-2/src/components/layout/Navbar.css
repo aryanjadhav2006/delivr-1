@@ -1,0 +1,113 @@
+.navbar {
+    background: transparent;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100% !important;
+    /* Override container style */
+    margin: 0 !important;
+    /* Override container style */
+    padding: 0 30px !important;
+    /* Shift content left/right with padding */
+    width: 100%;
+}
+
+.navbar-brand {
+    font-family: 'Chewy', cursive;
+    font-size: 64px;
+    font-weight: 400;
+    color: #800020;
+    /* Maroon */
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 0px #000;
+    /* 3D shadow effect */
+    transform: rotate(-2deg);
+    /* Slight tilt for fun */
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Make links look like the buttons in ref */
+.navbar-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border: 2px solid #000;
+    background: #fff;
+    box-shadow: 4px 4px 0px 0px #000;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+.navbar-link:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0px 0px #000;
+    color: #000;
+}
+
+.navbar-link:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px #000;
+}
+
+.cart-link {
+    position: relative;
+    font-size: 20px;
+    padding: 8px 12px;
+    /* Smaller padding for icon */
+}
+
+.cart-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #800020;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 50%;
+    min-width: 24px;
+    text-align: center;
+    border: 2px solid #000;
+}
+
+@media (max-width: 768px) {
+    .navbar-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar-menu {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .navbar-brand {
+        font-size: 48px;
+    }
+}

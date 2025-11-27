@@ -1,0 +1,171 @@
+.earnings-page {
+    min-height: 100vh;
+    background-color: #FFF8E7;
+    padding-bottom: 60px;
+}
+
+.earnings-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+.earnings-header h1 {
+    font-family: 'Chewy', cursive;
+    font-size: 3rem;
+    color: #800020;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.earnings-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.time-filter {
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 12px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 4px 4px 0px 0px #000;
+    transition: all 0.2s ease;
+}
+
+.time-filter:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0px 0px #000;
+}
+
+.earnings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.earnings-card {
+    background: white;
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 8px 8px 0px 0px #000;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.earnings-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: #800020;
+    margin-bottom: 15px;
+    background: #FFF8E7;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+}
+
+.card-title {
+    font-family: 'Chewy', cursive;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #800020;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 5px;
+}
+
+.card-subtitle {
+    color: #666;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .earnings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .earnings-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .earnings-controls {
+        justify-content: center;
+    }
+}
+
+/* New Graph Section Styles */
+.earnings-chart-section {
+    background: white;
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 8px 8px 0px 0px #000;
+    margin-bottom: 40px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.section-header h2 {
+    font-family: 'Chewy', cursive;
+    font-size: 2rem;
+    color: #333;
+    margin: 0;
+}
+
+.chart-container {
+    height: 400px;
+    width: 100%;
+}
+
+/* Average Earnings Card Specifics */
+.avg-earnings-card {
+    grid-column: 1 / -1;
+    /* Span full width if in grid, or handle separately */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .avg-earnings-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

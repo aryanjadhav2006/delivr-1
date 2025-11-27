@@ -1,0 +1,300 @@
+.track-order-page {
+    min-height: 100vh;
+    background: #FFF8E7;
+    /* Cream background */
+    display: flex;
+    flex-direction: column;
+}
+
+.track-order-container {
+    padding: 40px 20px;
+    flex: 1;
+}
+
+.page-title {
+    font-family: 'Chewy', cursive;
+    font-size: 48px;
+    color: #800020;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 3px 3px 0px #000;
+}
+
+.track-order-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Map Placeholder */
+.map-placeholder {
+    height: 400px;
+    background: #e0e0e0;
+    border: 2px solid #000;
+    border-radius: 16px;
+    box-shadow: 8px 8px 0px 0px #000;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.map-bg {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    background-image:
+        linear-gradient(#ccc 1px, transparent 1px),
+        linear-gradient(90deg, #ccc 1px, transparent 1px);
+    background-size: 20px 20px;
+    position: relative;
+}
+
+.map-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: white;
+    padding: 8px 16px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-weight: 700;
+    box-shadow: 4px 4px 0px 0px #000;
+}
+
+.map-marker {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #800020;
+    font-size: 32px;
+    filter: drop-shadow(2px 2px 0px #000);
+}
+
+.map-marker span {
+    font-size: 14px;
+    font-weight: 700;
+    background: white;
+    padding: 2px 6px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.restaurant-marker {
+    top: 20%;
+    left: 20%;
+}
+
+.user-marker {
+    bottom: 20%;
+    right: 20%;
+    color: #000;
+}
+
+.delivery-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    color: #000;
+    transform: translate(-50%, -50%);
+    animation: drive 3s infinite linear;
+}
+
+@keyframes drive {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-40%, -60%) rotate(10deg);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(-60%, -40%) rotate(-10deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+/* Timeline */
+.order-timeline-card {
+    background: white;
+    border: 2px solid #000;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 8px 8px 0px 0px #000;
+}
+
+.order-timeline-card h2 {
+    font-family: 'Chewy', cursive;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.timeline-step {
+    display: flex;
+    gap: 16px;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.timeline-step:last-child {
+    padding-bottom: 0;
+}
+
+.step-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background: white;
+}
+
+.step-icon svg {
+    color: #4caf50;
+    font-size: 24px;
+}
+
+.step-icon .circle {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+}
+
+.step-line {
+    position: absolute;
+    left: 14px;
+    top: 30px;
+    bottom: 0;
+    width: 2px;
+    background: #ccc;
+    z-index: 1;
+}
+
+.timeline-step.completed .step-line {
+    background: #4caf50;
+}
+
+.step-content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #ccc;
+}
+
+.timeline-step.completed .step-content h3,
+.timeline-step.active .step-content h3 {
+    color: #000;
+}
+
+.step-time {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Sidebar Cards */
+.partner-card,
+.order-summary-card {
+    background: white;
+    border: 2px solid #000;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 8px 8px 0px 0px #000;
+    margin-bottom: 30px;
+}
+
+.partner-card h2,
+.order-summary-card h2 {
+    font-family: 'Chewy', cursive;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+}
+
+.partner-info {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.partner-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+.partner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.partner-details h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.partner-vehicle {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.partner-rating {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ff9800;
+}
+
+.btn-call {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.summary-item:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .track-order-grid {
+        grid-template-columns: 1fr;
+    }
+}

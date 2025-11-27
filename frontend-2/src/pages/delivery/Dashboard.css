@@ -1,0 +1,115 @@
+.delivery-dashboard {
+    min-height: 100vh;
+    background-color: #FFF8E7;
+    padding-bottom: 60px;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 40px;
+}
+
+.dashboard-header h1 {
+    font-family: 'Chewy', cursive;
+    font-size: 3rem;
+    color: #800020;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.dashboard-card {
+    background: white;
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 8px 8px 0px 0px #000;
+    transition: transform 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.card-header h2 {
+    font-family: 'Chewy', cursive;
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #800020;
+    font-family: 'Outfit', sans-serif;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Toggle Dropdown */
+.toggle-select {
+    padding: 8px 12px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 3px 3px 0px 0px #000;
+}
+
+.toggle-select:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px 0px #000;
+}
+
+/* Charts */
+.chart-container {
+    height: 300px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.chart-section {
+    margin-top: 40px;
+}
+
+.chart-section h2 {
+    font-family: 'Chewy', cursive;
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header h1 {
+        font-size: 2.5rem;
+    }
+}
